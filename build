@@ -1,0 +1,3 @@
+#!/bin/bash
+
+dmd main.d cld/*.d -L-lOpenCL
