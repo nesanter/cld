@@ -128,7 +128,7 @@ int clGetContextInfo(cl_context, cl_context_info, size_t, void *, size_t *);
 /* Command Queue */
 cl_command_queue clCreateCommandQueueWithProperties(cl_context, cl_device_id, const(cl_queue_properties) *, int *);
 int clRetainCommandQueue(cl_command_queue);
-int clReleaesCommandQueue(cl_command_queue);
+int clReleaseCommandQueue(cl_command_queue);
 int clGetCommandQueueInfo(cl_command_queue, cl_command_queue_info, size_t, void *, size_t *);
 
 /* Memory Object */
@@ -734,5 +734,5 @@ enum CL_PROFILING_COMMAND_QUEUED =                  0x1280;
 enum CL_PROFILING_COMMAND_SUBMIT =                  0x1281;
 enum CL_PROFILING_COMMAND_START =                   0x1282;
 enum CL_PROFILING_COMMAND_END =                     0x1283;
-enum CL_PROFILING_COMMAND_COMPLETE =                0x1284;
+version (CL_2_0) enum CL_PROFILING_COMMAND_COMPLETE =                0x1284;
 
